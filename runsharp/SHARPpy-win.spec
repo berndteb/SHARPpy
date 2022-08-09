@@ -3,11 +3,13 @@ import sys
 import glob
 import sharppy
 from sharppy._version import get_versions
-
 import os
-WIN_PATH = os.getcwd()
 
+# Set-up paths, print to check
+WIN_PATH = os.getcwd()
 print("PATH TO SHARPPY:", sharppy.__file__)
+print("WIN_PATH:", WIN_PATH)
+
 # Write the versions file using versioneer, because PyInstaller doesn't do this automatically
 ver = get_versions()
 ver = str(ver)
@@ -20,6 +22,7 @@ ver_file.close()
 del sharppy
 import sharppy
 
+# Analyze the SHARPpy package to get dependencies, etc.
 a = Analysis(['SHARPpy.py'],
              pathex=[WIN_PATH+r'\runsharp', WIN_PATH],
              hiddenimports=['xml.etree.ElementTree', 'sharppy.io.pecan_decoder', 'sharppy.io.spc_decoder', 'sharppy.io.buf_decoder', 'sharppy.io.uwyo_decoder', 'sharppy.io.nucaps_decoder', 'datasources.available', 'sharppy.sharptab.prof_collection', 'certifi', 'pkg_resources.py2_warn'],
