@@ -1,7 +1,11 @@
 # -*- mode: python -*-
 # Force pyinstaller to use the local code instead of the installed code.
 import sys
+import os
+
+# Set-up paths, print to check
 sys.path.append("../")
+runsharp_path = os.getcwd()
 
 import sharppy
 import glob
@@ -18,8 +22,8 @@ ver_file.close()
 
 
 a = Analysis(['SHARPpy.py'],
-             pathex=['/home/tsupinie/SHARPpy/runsharp'],
-             hiddenimports=['xml.etree.ElementTree', 'sharppy.io.pecan_decoder', 'sharppy.io.spc_decoder', 'sharppy.io.buf_decoder', 'sharppy.io.uwyo_decoder', 'datasources.available', 'sharppy.sharptab.prof_collection'],
+             pathex=[runsharp_path, runsharp_path+r'/runsharp'],
+             hiddenimports=['xml.etree.ElementTree', 'sharppy.io.pecan_decoder', 'sharppy.io.spc_decoder', 'sharppy.io.buf_decoder', 'sharppy.io.uwyo_decoder', 'sharppy.io.nucaps_decoder', 'datasources.available', 'sharppy.sharptab.prof_collection'],
              hookspath=None,
              runtime_hooks=None)
 
@@ -63,4 +67,3 @@ exe = EXE(pyz,
 # Revert the _version.py file to its original version using git
 import subprocess
 subprocess.Popen(['git', 'checkout', '--', ver_fname])
-

@@ -4,8 +4,15 @@ import sys
 import glob
 import sharppy
 from sharppy._version import get_versions
+import os
+
+# Set-up paths, print to check
+# runsharp_path = os.path.dirname(sharppy.__file__) + '/..'
+runsharp_path = os.getcwd()
 
 print("PATH TO SHARPPY:", sharppy.__file__)
+print("runsharp_path:", runsharp_path)
+
 # Write the versions file using versioneer, because PyInstaller doesn't do this automatically
 ver = get_versions()
 ver = str(ver)
@@ -18,13 +25,10 @@ ver_file.close()
 del sharppy
 import sharppy
 
-# Get the working path for Azure-Pipelines build
-runsharp_path = os.path.dirname(sharppy.__file__) + '/..'
-
 # Analyze the SHARPpy package to get dependencies, etc.
 a = Analysis(['SHARPpy.py'],
              pathex=[runsharp_path, runsharp_path+r'/runsharp'],
-             hiddenimports=['xml.etree.ElementTree', 'sharppy.io.pecan_decoder', 'sharppy.io.spc_decoder', 'sharppy.io.buf_decoder', 'sharppy.io.uwyo_decoder', 'datasources.available', 'sharppy.sharptab.prof_collection', 'pkg_resources.py2_warn'],
+             hiddenimports=['xml.etree.ElementTree', 'sharppy.io.pecan_decoder', 'sharppy.io.spc_decoder', 'sharppy.io.buf_decoder', 'sharppy.io.uwyo_decoder', 'sharppy.io.nucaps_decoder', 'datasources.available', 'sharppy.sharptab.prof_collection', 'pkg_resources.py2_warn'],
              hookspath=None,
              runtime_hooks=None)
 a.binaries = [x for x in a.binaries if not x[0].startswith("scipy")]
