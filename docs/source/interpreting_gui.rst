@@ -177,9 +177,9 @@ Interpretting NUCAPS on the Skew-T diagram is similar to RAOB and model data. Yo
 
 NUCAPS also retrieves cloud top fraction (displayed as CTP = %) and pressure (displayed as a yellow line), which are indicated with red arrows on the example plot below. Significantly cloudy scenes may pass quality control but can still introduce errors to the retrieval, particularly for surface values. In addition to understanding retrieval confidence, the cloud products can be used to identify the cloud layer.
 
-Additional resources on NUCAPS in forecasting applications and SHARPPy:
+Additional resources on NUCAPS in forecasting applications and SHARPpy:
 
-* A `Esmaili et al., 2020 <https://doi.org/10.3390/rs12050886>`_ described how NUCAPS was used in the Hazardous Weather Testbed.
+* `Esmaili et al., 2020 <https://doi.org/10.3390/rs12050886>`_ describes how NUCAPS was used in the Hazardous Weather Testbed.
 
 * Satellite Book Club presentation on `YouTube <https://www.youtube.com/watch?v=7G1qe3nrKSQ>`_.
 

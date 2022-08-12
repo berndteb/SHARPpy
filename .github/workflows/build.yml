@@ -5,13 +5,8 @@
 name: build
 on:
   push:
-    # branches:
-    #   - main
-    #   - master
     tags:
       - v*.*.*
-  # schedule:
-  #   - cron: '0 0 * * *'
 
 
 jobs:

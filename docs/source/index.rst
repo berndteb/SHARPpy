@@ -19,7 +19,7 @@ Welcome to SHARPpy's documentation!
 
 SHARPpy is a collection of open source sounding and hodograph analysis routines, a sounding plotting package, and an interactive, *cross-platform* application for analyzing real-time soundings all written in Python. It was developed to provide the atmospheric science community a free and consistent source of sounding analysis routines. SHARPpy is constantly updated and vetted by professional meteorologists and climatologists within the scientific community to help maintain a standard source of sounding routines.
 
-We currently support Python >= 3.6.
+We currently support Python >= 3.7.
 
 Noteable Links
 ==============
@@ -27,7 +27,7 @@ Noteable Links
 * The `original SHARPpy presentation at AMS 2012 <https://ams.confex.com/ams/92Annual/webprogram/Paper203274.html>`_.
 * The `updated SHARPpy paper <https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=7&ved=2ahUKEwjRz8W7vKzfAhWQrFkKHYhpCQcQFjAGegQIAhAC&url=https%3A%2F%2Fams.confex.com%2Fams%2F95Annual%2Fwebprogram%2FManuscript%2FPaper270233%2Fsharppy_extended_abstract_draft1.pdf&usg=AOvVaw0VseR0-3VG15NyJd-Oi1Vk>`_ from AMS 2015.
 * The `BAMS article on SHARPpy <https://journals.ametsoc.org/doi/10.1175/BAMS-D-15-00309.1>`_ released in 2017.
-* `Google Scholar <https://scholar.google.com/scholar?start=0&q=%22SHARPpy%22&hl=en&as_sdt=0,21>`_ search for papers that use SHARPpy. 
+* `Google Scholar <https://scholar.google.com/scholar?start=0&q=%22SHARPpy%22&hl=en&as_sdt=0,21>`_ search for papers that use SHARPpy.
 
 .. toctree::
    :maxdepth: 1
@@ -40,10 +40,10 @@ Noteable Links
    interpreting_gui
    insets
    interacting_gui
-   SHARPpy_basics
    datasource_guide
    scripting
    auto_examples/index
+   modules
    contributing
    citing
 
@@ -53,5 +53,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
-

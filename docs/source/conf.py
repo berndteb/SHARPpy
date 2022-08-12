@@ -12,8 +12,8 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-#import os
-#import sys
+# import os
+# import sys
 #sys.path.insert(0, os.path.abspath('../../'))
 #print(os.path)
 
@@ -23,19 +23,18 @@ project = 'SHARPpy'
 copyright = '2019, Blumberg, W.G, Halbert, K.T., Supinie, T.A., Marsh, P.T., Thompson, R., and J. Hart'
 author = 'Blumberg, W.G, Halbert, K.T., Supinie, T.A., Marsh, P.T., Thompson, R., and J. Hart'
 
-from sharppy._version import get_versions
-# The short X.Y version
-version = get_versions()['version']
-# The full version, including alpha/beta/rc tags
-release = get_versions()['version']
-release = release.split('+')[0]
-version = release.split('+')[0]
-del get_versions 
+# from sharppy._version import get_versions
+# # The short X.Y version
+# version = get_versions()['version']
+# # The full version, including alpha/beta/rc tags
+# release = get_versions()['version']
+# release = release.split('+')[0]
+# version = release.split('+')[0]
+# del get_versions
 
 # -- General configuration ---------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
-#
 #needs_sphinx = '1.6'
 
 # Add any Sphinx extension module names here, as strings. They can be
@@ -60,7 +59,7 @@ napoleon_google_docstring = False
 napolean_numpy_docstring = True
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['ntemplates']
+# templates_path = ['ntemplates']
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
@@ -76,7 +75,7 @@ master_doc = 'index'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'en'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -91,7 +90,7 @@ pygments_style = None
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-#
+
 html_theme = 'sphinx_rtd_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
@@ -103,7 +102,8 @@ html_theme = 'sphinx_rtd_theme'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['nstatic', 'css/mystyle.css']
+html_static_path = ['css/mystyle.css']
+# html_static_path = ['nstatic', 'css/mystyle.css']
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
