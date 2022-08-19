@@ -139,9 +139,9 @@ sharppy
 SHARPpy is currently managed by the following co-developers (in no particular order):
 
 - Patrick Marsh (SPC)
-- Kelton Halbert (UW-Madison)
+- Kelton Halbert (SPC)
 - Greg Blumberg (Millersville University)
-- Tim Supinie (OU School of Meteorology)
+- Tim Supinie (Center for Analysis and Prediction of Storms)
 - Rebekah Esmaili (Science and Technology Corp.)
 - Jeff Szkodzinski (Science and Technology Corp.)
 

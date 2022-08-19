@@ -1,6 +1,14 @@
 Change Log
 ==========
 
+SHARPpy v1.5.0 "Moore" Release
+--------------------------------
+
+NEW FEATURES
+
+* Now displays NUCAPS satellite soundings from NOAA-20 and MetOp satellites
+
+
 SHARPpy v1.4.0 "Andover" Release
 --------------------------------
 
@@ -20,7 +28,7 @@ NEW FEATURES
 * Improved documentation online (no longer in README)
 * Documentation and sphinx-generated API is pushed to Github Pages with each tagged release.
 * Readout cursor can be configured to output other variables (e.g., potential temperature, theta-E)
-* Ability to modify surface by changing the surface temperature or dewpoint (mixed layer optional) 
+* Ability to modify surface by changing the surface temperature or dewpoint (mixed layer optional)
 * Up/down buttons on keyboard can now be used to flip through the ensemble members plotted in the SHARPpy GUI.
 * Logging enabled when --debug flag is enabled.
 * GUI now displays alert box when questionable data is requested to be plotted. Users now have the option to choose if they wish to still try to plot the data.
@@ -29,7 +37,7 @@ NEW FEATURES
 * Included more scripting examples in docs.
 * Deployment to conda and pip with each tagged SHARPpy release.
 * Added test scripts to unit test various GUI parts, decoders, and numerical routines
-* GUI checks Github Releases to see if the code being run is the current version 
+* GUI checks Github Releases to see if the code being run is the current version
 
 BUG FIXES
 
@@ -39,7 +47,7 @@ BUG FIXES
 * Fixed bug when convective temperature routine would error if SBCAPE was 0
 * Adjusted SWEAT calculation due to issue #153
 * Fixed SHERB calculation due to issue #151.
-* MBURST was fixed to use VT instead of TT. 
+* MBURST was fixed to use VT instead of TT.
 * Fixed bug where masked values were getting passed to np.arange
 * prof_collection was modified to handle missing ensemble members
 * Fixed the incorrect matching criteria for SARS using the MLLCL
@@ -130,5 +138,3 @@ Following the SHARPpy presentation in the Python Symposium at the annual America
 This release features core numerical functionality (thermodynamic and kinematic routines) for scripting and data processing, in addition to graphical user interface functionality and interactivity.
 
 Instructions on how to install and run can be found in the readme.
-
-
