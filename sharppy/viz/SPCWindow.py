@@ -967,12 +967,13 @@ class SPCWindow(QMainWindow):
 
         # JTS - For NUCAPS case study data sources,
         # construct pc_date string from pc_loc since obs times list is empty.
-        if pc_model == "NUCAPS Case Study NOAA-20" \
-            or pc_model == "NUCAPS Case Study Suomi-NPP" \
-            or pc_model == "NUCAPS Case Study Aqua" \
-            or pc_model == "NUCAPS Case Study MetOp-A" \
-            or pc_model == "NUCAPS Case Study MetOp-B" \
-            or pc_model == "NUCAPS Case Study MetOp-C":
+        # if pc_model == "NUCAPS Case Study NOAA-20" \
+        #     or pc_model == "NUCAPS Case Study Suomi-NPP" \
+        #     or pc_model == "NUCAPS Case Study Aqua" \
+        #     or pc_model == "NUCAPS Case Study MetOp-A" \
+        #     or pc_model == "NUCAPS Case Study MetOp-B" \
+        #     or pc_model == "NUCAPS Case Study MetOp-C":
+        if "NUCAPS Case Study" in pc_model:
             date = pc_loc.split('_')[0]
             time = pc_loc.split('_')[1]
             day = date[4:6]
