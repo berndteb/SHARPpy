@@ -2,8 +2,8 @@
 
 ###### Sounding/Hodograph Analysis and Research Program in Python
 
-[![Build status](https://travis-ci.org/sharppy/SHARPpy.svg?branch=master)](https://travis-ci.org/sharppy)
-[![Build Status](https://dev.azure.com/sharppy/SHARPpy/_apis/build/status/sharppy.SHARPpy?branchNammasterr)](https://dev.azure.com/sharppy/SHARPpy/_build/latest?definitionId=1?branchName=master)
+[![Test Status](https://github.com/NUCAPS/SHARPpy/actions/workflows/pytest.yml/badge.svg?branch=master)](https://github.com/NUCAPS/SHARPpy/actions/workflows/pytest.yml)
+[![Build Status](https://github.com/NUCAPS/SHARPpy/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/NUCAPS/SHARPpy/actions/workflows/build.yml)
 [![Anaconda-Server Badge](https://anaconda.org/conda-forge/sharppy/badges/downloads.svg)](https://anaconda.org/conda-forge/sharppy)
 [![Anaconda-Server Badge](https://anaconda.org/conda-forge/sharppy/badges/license.svg)](https://anaconda.org/conda-forge/sharppy)
 [![](https://img.shields.io/github/downloads/sharppy/SHARPpy/total.svg?style=popout)](https://github.com/sharppy/SHARPpy/releases)
@@ -16,12 +16,12 @@ The version of SHARPpy in this repository allows users to access [NUCAPS](https:
 
 ### Important links:
 * HTML Documentation: http://sharppy.github.io/SHARPpy/index.html
-* GitHub repository: https://github.com/NUCAPS/SHARPpy
+* GitHub repository: https://github.com/sharppy/SHARPpy
 
 **Table of Contents**
 
 - [Install Pre-requisites](#install-pre-requisites)
-- [Install the NUCAPS test branch in SHARPpy](#install-the-nucaps-test-branch-in-sharppy)
+- [Install SHARPpy](#install-sharppy)
 - [Running SHARPpy from the Command Line](#running-sharppy-from-the-command-line)
 - [SHARPpy Development Team](#sharppy-development-team)
 
@@ -39,10 +39,18 @@ You will need run a few simple commands in a command line program:
 Note: If you are installing Anaconda for **multiple users**, [ensure these additional steps are met](https://docs.anaconda.com/anaconda/install/multi-user/), which includes checking the permissions using an administrator account.
 
 =======================================================================
-## Install NUCAPS-enabled SHARPpy
+## Install SHARPpy
 <sup>[[Return to Top]](#sharppy)</sup>
 
+For those wishing to run both the GUI and do scripting, we recommend you install the Python 3 Anaconda Python Distribution from Continuum Analytics. You can install SHARPpy from conda by using:
+
+```bash
+conda install -c conda-forge sharppy
+```
+Skip to the 'Running SHARPpy from the Command Line' section.
+
 ### Download options
+If you aren't downloading from conda forge, you can download sharppy using the following options.
 
 ### Option 1: Manual download (easy)
 
@@ -53,7 +61,7 @@ You can manually download the coding by clicking the "Code" button at the top ri
 If you have Git installed and are familiar with it, open the command line for your operating system (see above) to perform these steps.
 
 ```bash
-git clone https://github.com/NUCAPS/SHARPpy
+git clone https://github.com/sharppy/SHARPpy
 ```
 
 ### Install SHARPpy
@@ -76,7 +84,7 @@ After creating the environment, we need to switch to this new environment (via c
 conda activate devel
 ```
 
-Run setup.py to apply our NUCAPS updates to SHARPpy.
+Run setup.py to update SHARPpy.
 
 ```bash
 python setup.py install
